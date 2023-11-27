@@ -7,10 +7,10 @@ export default function NestedVariantsPage() {
 	return (
 		<Container>
 			<Center>
-				<Stack gap="space-y-8">
+				<Stack space="space-y-8">
 					<Box />
 					<Box />
-					<Stack gap="space-y-2">
+					<Stack space="space-y-2">
 						<Box />
 						<Box />
 						<Box />
