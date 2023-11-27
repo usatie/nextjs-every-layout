@@ -1,21 +1,18 @@
-import { Box } from "../components/box";
-import { Cluster } from "../components/cluster";
+import Link from "next/link";
 import { Container } from "../components/container";
+import { Stack } from "../components/stack";
+import { Box } from "../components/box";
+import { Center } from "../components/center";
 
 export default function ClusterExamplePage() {
     return (
         <Container>
-            <Box>
-                <Cluster>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">Layout</a></Box>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">CSS</a></Box>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">Web Design</a></Box>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">Code</a></Box>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">Front-end</a></Box>
-                    <Box padding="px-6 py-1"><a className="underline text-sm font-bold">Development</a></Box>
-                </Cluster>
-            </Box>
+            <Center>
+                <Stack>
+                    <Box padding="px-4 py-2"><Link href="/cluster/1">Tags</Link></Box>
+                    <Box padding="px-4 py-2"><Link href="/cluster/2">Header</Link></Box>
+                </Stack>
+            </Center>
         </Container>
-
-    )
+    );
 }
