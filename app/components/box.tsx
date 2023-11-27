@@ -3,9 +3,9 @@ export type BoxProps = {
   padding?: string;
   borderWidth?: string;
 };
-export function Box({ children, padding = "p-4", borderWidth = "border-4" }: BoxProps) {
+export function Box({ children, padding = "p-6", borderWidth = "border-4" }: BoxProps) {
   return (
-    <div className={`flex flex-col ${padding} border-white ${borderWidth}`}>
+    <div className={`${padding} border-white ${borderWidth}`}>
       {children}
     </div>
   );
