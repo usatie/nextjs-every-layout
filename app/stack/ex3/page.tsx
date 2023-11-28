@@ -4,20 +4,28 @@ import { Container } from "@/app/components/container";
 import { Center } from "@/app/components/center";
 import { Button } from "@/app/components/button";
 
+function Label({ children }: { children?: React.ReactNode }) {
+    return <label className="text-sm font-bold">{children}</label>;
+}
+
+function Input() {
+    return <input type="text" className="w-full bg-black border-2 px-2"></input>;
+}
+
 export default function NestedVariantsPage() {
     return (
         <Container>
             <Center intrinsic>
-                <div className="w-1/2 h-1/2">
+                <div className="max-w-prose h-1/2">
                     <Box>
                         <Stack space="space-y-4">
                             <Stack space="space-y-1">
-                                <p className="text-sm font-bold">Name</p>
-                                <input type="text" className="w-full bg-black border-2 px-2"></input>
+                                <Label>Name</Label>
+                                <Input />
                             </Stack>
                             <Stack space="space-y-1">
-                                <p className="text-sm font-bold">Email</p>
-                                <input type="email" className="w-full bg-black border-2 px-2"></input>
+                                <Label>Email</Label>
+                                <Input />
                                 <p className="text-xs">Type correct email address</p>
                             </Stack>
                             <div className="flex flex-row-reverse"><Button>Submit</Button></div>
